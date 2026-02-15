@@ -1,0 +1,22 @@
+services:
+  redguard:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    volumes:
+      - ../configs:/app/configs:ro
+      - ../reports:/app/reports
+    environment:
+      - REDGUARD_ENV=development
+      - REDGUARD_DRY_RUN=true
+    networks:
+      - redguard-net
+    security_opt:
+      - no-new-privileges:true
+    read_only: true
+    tmpfs:
+      - /tmp
+
+networks:
+  redguard-net:
+    driver: bridge

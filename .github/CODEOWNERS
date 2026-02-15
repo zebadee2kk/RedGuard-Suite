@@ -1,0 +1,7 @@
+# Default owner for all files
+* @redguard-maintainers
+
+# Security-sensitive files require security team review
+SECURITY.md @redguard-security
+.github/workflows/ @redguard-maintainers
+src/redguard/modules/ @redguard-maintainers

@@ -1,0 +1,13 @@
+{
+  "targets": ["example.com"],
+  "modules": {
+    "recon": true,
+    "scan": true,
+    "llm_garak": false,
+    "report": true
+  },
+  "risk_matrix": {
+    "impact_levels": ["Low", "Medium", "High", "Critical"],
+    "likelihood_levels": ["Rare", "Possible", "Likely", "Almost Certain"]
+  }
+}
